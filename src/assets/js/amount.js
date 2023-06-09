@@ -1,9 +1,9 @@
 import { getDataCopy, setUpdateCallback } from './storage';
 
-const subTotal = document.getElementById('subtotal');
-const tax = document.getElementById('tax').textContent;
-const shipping = document.getElementById('shipping').textContent;
-const totalGoods = document.getElementById('total');
+const subTotal = document.querySelector('#subtotal');
+const tax = document.querySelector('#tax').textContent;
+const shipping = document.querySelector('#shipping').textContent;
+const totalGoods = document.querySelector('#total');
 
 const update = () => {
 	const array = getDataCopy();
