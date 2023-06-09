@@ -1,0 +1,21 @@
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/placeholder/placeholder.nunj" import placeholder %}
+
+{% macro promo() %}
+	<div class="promo">
+		<h2 class="promo__title">Promo code</h2>
+		<div class="promo__container form">
+		{{ placeholder({
+				classNameLabel:'form__label',
+				classNameInput: "form__input--small",
+				name: 'promocode',
+				aria: 'промокод'
+			}) }}
+			{{ button({
+				className: 'promo__button button--color-second',
+				children: 'Apply',
+				chevronRight: false
+			}) }}
+		</div>
+	</div>
+{% endmacro %}

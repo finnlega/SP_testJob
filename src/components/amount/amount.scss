@@ -1,0 +1,31 @@
+.total-amount {
+	display: none;
+}
+
+@media (min-width: $desktop-width) {
+	.total-amount {
+		display: block;
+		padding: 40px 55px 190px 40px;
+	}
+
+	.total-amount__content {
+		display: grid;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.total-amount__block {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.total-amount__text {
+		@include font-style();
+		font-size: 14px;
+		line-height: 34px;
+
+		&--bold {
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+}

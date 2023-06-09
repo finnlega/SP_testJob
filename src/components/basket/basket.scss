@@ -1,0 +1,60 @@
+.basket {
+	display: none;
+}
+
+@media (min-width: $desktop-width) {
+	.basket {
+		display: block;
+		padding: 40px 40px;
+	}
+
+	.basket__title {
+		@include font-style();
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 30px;
+	}
+
+	.item {
+		display: flex;
+		width: 330px;
+		margin-bottom: 40px;
+	}
+
+	.item__link {
+		width: 100px;
+		height: 100px;
+		margin-right: 12px;
+	}
+
+	.item__block {
+		display: flex;
+	}
+
+	.item__text {
+		@include font-style();
+		display: block;
+		width: 202px;
+		height: 32px;
+		margin-bottom: 15px;
+	}
+
+	.item__delete {
+		position: relative;
+		border: 0;
+
+		&::before {
+			position: absolute;
+			content: '';
+			@include s($button-delete);
+			width: 19px;
+			height: 18px;
+			background-color: transparent;
+			border: none;
+			background-repeat: no-repeat;
+			left: -3px;
+			top: 0;
+		}
+	}
+}

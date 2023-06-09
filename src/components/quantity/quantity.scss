@@ -1,0 +1,82 @@
+.inputs-box {
+	position: relative;
+	width: 83px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background: none;
+	margin-right: 25px;
+}
+
+.btn-decrease,
+.btn-increase {
+	position: relative;
+	height: 20px;
+	width: 20px;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	border: 1px solid black;
+}
+
+.btn-decrease:active::before,
+.btn-increase:active::after,
+.btn-increase:active::before {
+	background: #000000;
+	box-shadow: none;
+}
+
+.btn-decrease:disabled::before,
+.btn-increase:disabled::after,
+.btn-increase:disabled::before {
+	background: #000000;
+	box-shadow: none;
+}
+
+.btn-decrease::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	width: 13px;
+	background: #000000;
+	left: 3px;
+	top: 8px;
+}
+
+.btn-increase:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	width: 13px;
+	background: #000000;
+	left: 3px;
+	top: 8px;
+}
+
+.btn-increase:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 1px;
+	width: 13px;
+	background: #000000;
+	left: 3px;
+	top: 8px;
+	transform: rotate(90deg);
+}
+
+.form-field {
+	height: 20px;
+	@include font-style();
+	color: #000000;
+}
+
+.input {
+	width: 43px;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+	border-width: 0;
+}

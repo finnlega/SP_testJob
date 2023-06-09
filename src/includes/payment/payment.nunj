@@ -1,0 +1,89 @@
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/placeholder/placeholder.nunj" import placeholder %}
+
+<div class="payment">
+	<div class="payment__container">
+		<h2 class="payment__title">Billing Information</h2>
+		<div class="payment__switch switch">
+			<label class="switch__text" for="card">
+				<input class="invisible-container switch__input" type="radio" id="card" name="payment"
+					aria-label="Выбрать кредитную карту" checked>
+				<span class="switch__control-mark" tabindex="0"></span>
+				<span class="switch__control-label">Pay with Credit Card</span>
+			</label>
+			<label class="switch__text" for="pay-pal">
+				<input class="invisible-container switch__input" type="radio" id="pay-pal" name="payment"
+					aria-label="Выбрать оплату Pay Pal">
+				<span class="switch__control-mark switch__control-mark--move" tabindex="0"></span>
+				<img class="switch__payment-image" src="assets/images/pay_pal.svg" width="85" height="23" alt="Оплата PayPal">
+            </label>
+        </div>
+	</div>
+	<section class="payment__form form">
+		<h3 class="invisible-container">Card details</h3>
+		<div class="form__wrapper">
+			<span class="form__text">Name on card</span>
+			{{ placeholder({
+					className:'form__label',
+					name: 'card-name',
+					aria: 'имя и фамилию держателя карты'
+			}) }}
+			<span class="form__text">Card number</span>
+			<div class="form__block">
+				<label class="form__label text-form" for="card-number-block-1">
+					<input class="form__input form__input--size" type="number" id="card-number-block-1" name="card-number"
+					placeholder="" aria-label="Ввести номер карты">
+				</label>
+				<label class="form__label text-form" for="card-number-block-2">
+					<input class="form__input form__input--size" type="number" id="card-number-block-2">
+				</label>
+				<label class="form__label text-form" for="card-number-block-3">
+					<input class="form__input form__input--size" type="number" id="card-number-block-3">
+				</label>
+				<label class="form__label text-form" for="card-number-block-4">
+					<input class="form__input form__input--size" type="number" id="card-number-block-4">
+				</label>
+			</div>
+			<div class="form__block">
+				<span class="form__text text-move">Expire date</span>
+				<span class="form__text">CVV code</span>
+			</div>
+			<div class="form__block">
+				<label for="card-expiry"></label>
+				<input class= "form__input form__input--size form__input--offset" type="text" id="card-expiry" name="card-expiry" required>
+				<label for="card-cvv"></label>
+				<input class= "form__input form__input--size form__input--offset" type="password" id="card-cvv" name="card-cvv" placeholder="" minlength="3" maxlength="4" required>
+			</div>
+		</div>
+		<div class="agreement checkbox">
+			<label class="checkbox__text" for="save">
+				<input class="invisible-container checkbox__input" type="checkbox" id="save" name="save"
+					aria-label="Выбрать кредитную карту" checked>
+				<span class="checkbox__control-mark" tabindex="0"></span>
+				<span class="checkbox__control-label">Save information of this credit card</span>
+			</label>
+			<label class="checkbox__text" for="agreement">
+				<input class="invisible-container checkbox__input" type="checkbox" id="agreement" name="agreement"
+					aria-label="Выбрать оплату Pay Pal">
+				<span class="checkbox__control-mark" tabindex="0"></span>
+				<span class="checkbox__control-label wide">I accept the
+					<span class="checkbox__control-label checkbox__control-label--color">terms and comditions</span>
+					 and the <span class="checkbox__control-label checkbox__control-label--color">Privacy Policies</span>
+				</span>
+            </label>
+        </div>
+		<div class="form__button">
+			{{ button({
+				className: 'button--color-first',
+				children: 'Back',
+				chevronRight: false
+			}) }}
+			{{ button({
+				className: 'button--color-second',
+				children: 'Check Out',
+				chevronRight: false
+			}) }}
+		</div>
+    </section>
+</div>
+

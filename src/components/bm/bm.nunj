@@ -1,0 +1,5 @@
+{% macro bm() %}
+	<button class="header__toggle header__toggle--closed header__toggle--nojs" type="button" aria-label="Открыть меню">
+		<span class="invisible-container">Открыть меню</span>
+	</button>
+{% endmacro %}

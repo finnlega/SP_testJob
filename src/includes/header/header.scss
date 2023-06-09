@@ -1,0 +1,29 @@
+.header {
+	padding: 26px 10px 22px 10px;
+	border-bottom: 1px solid $checkbox-color;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+	.header {
+		padding: 26px 30px 22px 30px;
+	}
+
+	.container {
+		padding: 0 30px;
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.header {
+		padding: 26px 30px 23px 30px;
+	}
+
+	.container {
+		padding: 0 30px;
+	}
+}

@@ -1,0 +1,23 @@
+{% macro amount() %}
+<div class="total-amount">
+	<h2 class="invisible-container">Account</h2>
+	<div class="total-amount__content">
+		<div class="total-amount__block">
+			<span class="total-amount__text">Subtotal</span>
+			<span class="total-amount__text" id="subtotal">$ 1 050</span>
+		</div>
+		<div class="total-amount__block">
+			<span class="total-amount__text">Tax</span>
+			<span class="total-amount__text" id="tax">$ 100</span>
+		</div>
+		<div class="total-amount__block">
+			<span class="total-amount__text">Shipping</span>
+			<span class="total-amount__text" id="shipping">$ 150</span>
+		</div>
+		<div class="total-amount__block">
+			<span class="total-amount__text total-amount__text--bold">Total</span>
+			<span class="total-amount__text total-amount__text--bold" id="total">$ 1 300</span>
+		</div>
+	</div>
+</div>
+{% endmacro %}

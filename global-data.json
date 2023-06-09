@@ -1,0 +1,60 @@
+{
+	"menuItems": [
+		{
+			"name": "Поиск",
+			"className": "search",
+			"path": "#",
+			"icon": "/assets/images/sprites/search.svg"
+		},
+		{
+			"name": "Корзина",
+			"className": "cart",
+			"path": "#",
+			"icon": "/assets/images/sprites/cart.svg"
+		},
+		{
+			"name": "Меню",
+			"className": "burger",
+			"path": "#",
+			"icon": "/assets/images/sprites/burger.svg"
+		}
+	],
+
+	"timelineItems": [
+		{
+			"value": "1",
+			"title": "Account"
+		},
+		{
+			"value": "2",
+			"title": "Shipping"
+		},
+		{
+			"value": "3",
+			"title": "Billing"
+		},
+		{
+			"value": "4",
+			"title": "Review"
+		}
+	],
+
+	"basketItems": [
+		{
+			"text": "Amet minim mollit non deserunt&nbsp;ullamco est sit",
+			"icon": "/assets/images/basket-item1.png",
+			"icon@2x": "/assets/images/basket-item1@2x.png",
+			"iconWebp":"/assets/images/basket-item1.webp",
+			"iconWebp@2x":"/assets/images/basket-item1@2x.webp",
+			"price": "525"
+		},
+		{
+			"text": "Amet minim mollit non",
+			"icon": "/assets/images/basket-item2.png",
+			"icon@2x": "/assets/images/basket-item2@2x.png",
+			"iconWebp":"/assets/images/basket-item2.webp",
+			"iconWebp@2x":"/assets/images/basket-item2@2x.webp",
+			"price": "525"
+		}
+	]
+}

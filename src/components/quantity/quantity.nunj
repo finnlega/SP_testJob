@@ -1,0 +1,11 @@
+{% macro quantity() %}
+	<div class="inputs-box">
+		<button class="btn-decrease minus" type="button">
+			<span class="invisible-container">Уменьшить колличество</span>
+		</button>
+		<input class="form-field input" type="text" name="quantity" placeholder="" value="1" disabled>
+		<button class="btn-increase plus" type="button">
+			<span class="invisible-container">Увеличить колличество</span>
+		</button>
+	</div>
+{% endmacro %}

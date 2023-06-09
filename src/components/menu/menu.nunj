@@ -1,0 +1,23 @@
+{% macro menu() %}
+	<nav class="menu">
+		{% for item in menuItems %}
+			{% if loop.last %}
+			<a href="{{ item.path }}" class="menu__item">
+				<img class="menu__item menu__item--{{item.className}}" src = "{{item.icon}}" alt="{{item.name}}" width="24" height="24">
+				<span class="invisible-container">{{item.name}}</span>
+			</a>
+			{% elif loop.index === 2 %}
+			<a href="{{ item.path }}" class="menu__item menu__item--second">
+				<div class="menu__count">
+					<img class="menu__item menu__item--{{item.className}}" src = "{{item.icon}}" alt="{{item.name}}" width="24" height="24">
+					<span class="invisible-container">{{item.name}}</span>
+				</div>
+			</a>
+			{% else %}
+			<a href="{{ item.path }}" class="menu__item menu__item--first">
+				<img class="menu__item menu__item--{{item.className}}" src = "{{item.icon}}" alt="{{item.name}}" width="24" height="24">
+				<span class="invisible-container">{{item.name}}</span>
+			</a> {% endif %}
+		{% endfor %}
+	</nav>
+{% endmacro %}

@@ -1,0 +1,167 @@
+.timeline {
+	padding: 58px 10px 61px 10px;
+	margin: 0 auto;
+}
+
+.timeline__container {
+	position: relative;
+	height: 45px;
+	display: flex;
+	flex-direction: row;
+}
+
+/* Контейнер вокруг содержимого */
+
+.timeline__content {
+	position: relative;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+
+	&--offset-first {
+		margin-right: 26px;
+	}
+
+	&--offset-second {
+		margin-right: 38px;
+	}
+
+	&--offset-third {
+		margin-right: 47px;
+	}
+}
+
+.text {
+	margin: 0;
+	text-align: center;
+	@include font-style();
+}
+
+.stage {
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 150%;
+	letter-spacing: 0.2px;
+	color: $primary-text-color;
+
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: $primary-bg-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--success {
+		background-color: $primary-text-color;
+		border: 1px solid $timeline-color;
+		color: $timeline-color;
+	}
+
+	&--in-work {
+		background-color: $primary-text-color;
+		border: 1px solid $primary-bg-color;
+		color: $main-text-color;
+	}
+}
+
+.done {
+	&::before {
+		position: absolute;
+		content: '';
+		border: 1px solid $primary-bg-color;
+		top: 9px;
+		left: 30px;
+		width: calc(5rem);
+		z-index: -1;
+	}
+}
+
+.process::before {
+	position: absolute;
+	content: '';
+	border: 1px solid $timeline-color;
+	top: 9px;
+	left: 30px;
+	width: calc(4rem);
+	z-index: -1;
+}
+
+@media (min-width: $tablet-width) {
+	.timeline {
+		padding: 60px 66px 60px 63px;
+		margin: 0 auto;
+	}
+
+	.timeline__content {
+		&--offset-first {
+			margin-right: 126px;
+		}
+
+		&--offset-second {
+			margin-right: 157px;
+		}
+
+		&--offset-third {
+			margin-right: 166px;
+		}
+	}
+
+	.done {
+		&:before {
+			width: calc(5rem * 2.5);
+		}
+	}
+
+	.process::before {
+		width: calc(5rem * 2.3);
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.timeline {
+		padding-bottom: 58px;
+	}
+
+	.timeline__content {
+		&--offset-first {
+			margin-right: 136px;
+		}
+
+		&--offset-third {
+			margin-right: 178px;
+		}
+	}
+
+	.process::before {
+		width: 12.5rem;
+	}
+}
+
+@media (min-width: $desktopHD-width) {
+	.timeline__content {
+		&--offset-first {
+			margin-right: 301px;
+		}
+
+		&--offset-second {
+			margin-right: 298px;
+		}
+
+		&--offset-third {
+			margin-right: 312px;
+		}
+	}
+
+	.done::before {
+		width: 21.5rem;
+	}
+
+	.process::before {
+		width: 21.5rem;
+	}
+}

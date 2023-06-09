@@ -1,0 +1,6 @@
+{% macro placeholder(props) %}
+<label class="{{ props.classNameLabel }}" for="{{ props.name }}">
+	<input class="form__input {{props.classNameInput}}" type="text" id="{{props.name}}"
+	name="{{props.name}}" placeholder="Placeholder Text" required aria-label="Указать {{props.aria}}">
+</label>
+{% endmacro %}

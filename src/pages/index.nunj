@@ -1,0 +1,24 @@
+{% extends "../templates/base.nunj" %}
+{% from "../components/button/button.nunj" import button %}
+{% from "../components/icon/icon.nunj" import icon %}
+{% from "../components/timeline/timeline.nunj" import timeline %}
+{% from "../components/basket/basket.nunj" import basket %}
+{% from "../components/promo/promo.nunj" import promo %}
+{% from "../components/amount/amount.nunj" import amount %}
+
+{% block content %}
+	{% include '../includes/header/header.nunj' %}
+	<div class="content">
+		<div class="content__box">
+			<h1 class="invisible-container">Payment</h1>
+			{{ timeline() }}
+
+			{%include '../includes/payment/payment.nunj'%}
+		</div>
+		<div class="content__right">
+			{{ basket() }}
+			{{ promo() }}
+			{{ amount() }}
+		</div>
+	</div>
+{% endblock %}
