@@ -29,7 +29,7 @@
 					aria: 'имя и фамилию держателя карты'
 			}) }}
 			<span class="form__text">Card number</span>
-			<div class="form__block">
+			<div class="form__block form__block--mode">
 				<label class="form__label text-form" for="card-number-block-1">
 					<input class="form__input form__input--size" type="number" id="card-number-block-1" name="card-number"
 					placeholder="" aria-label="Ввести номер карты">
@@ -46,7 +46,9 @@
 			</div>
 			<div class="form__block">
 				<span class="form__text text-move">Expire date</span>
-				<span class="form__text">CVV code</span>
+				<div class="form__icon">
+					<span class="form__text">CVV code</span>
+				</div>
 			</div>
 			<div class="form__block">
 				<label for="card-expiry"></label>

@@ -99,6 +99,31 @@
 	}
 }
 
+.form__icon {
+	position: relative;
+	display: inline-block;
+
+	&::before {
+		position: absolute;
+		content: '?';
+		@include font-style();
+		font-size: 10px;
+		line-height: 14px;
+		letter-spacing: 0.2px;
+		color: $main-text-color;
+		top: 12px;
+		left: 64px;
+		@include br(50%);
+		width: 13px;
+		height: 13px;
+		overflow: hidden;
+		background-color: $clue;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 15;
+	}
+}
+
 .form__input {
 	@include font-style();
 	font-size: 14px;
@@ -129,7 +154,6 @@
 
 	&--size {
 		width: 71px;
-		//   margin-right: 10px;
 	}
 
 	&--offset {
@@ -280,6 +304,13 @@
 
 	.form__label {
 		margin-right: 0;
+	}
+
+	.form__block {
+		&--mode {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	.form__button {
